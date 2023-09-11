@@ -7,9 +7,28 @@
 </head>
 
 <body>	
-	<script>
+	<script> 
 		function secondHighest(arr) {
-			//Write your code here
+			let n=arr.length;
+			let h=Number. MIN_VALUE;
+			let s=Number. MIN_VALUE;
+			if(n<2)
+				return ("-Infinity");
+			// else if()
+			for (let i = 0; i < arr.length; i++) {
+				if (arr[i]>h) {
+					s=h;
+					h=arr[i]; 
+				
+				}
+				else if(arr[i]>s&&arr[i]<h){
+					s=arr[i];
+				}
+			}
+			if(s!=Number. MIN_VALUE)
+			return s;
+			else
+				return ("-Infinity");
 			
 		}
 
@@ -19,6 +38,7 @@
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
 			}
+			
 			alert(secondHighest(arr));
 		}
 		Main();
